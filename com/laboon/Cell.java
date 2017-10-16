@@ -66,19 +66,20 @@ public class Cell {
      * of when a cell is alive or dead.
      * @return Character representation of the cell's state
      */
-	
-    public char getStateRep() {
-	char toReturn = ' ';
-	if (_state == State.DEAD) {
-	    toReturn = '.';
-	} else if (_state == State.ALIVE) {
-	    toReturn = '*';
-	} else {
-	    toReturn = ' ';
+
+	public char getStateRep() {
+		char toReturn = ' ';
+		if (_state == State.DEAD) {
+			toReturn = ' ';
+		} else if (_state == State.ALIVE) {
+			toReturn = '*';
+		} else {
+			toReturn = ' ';
+		}
+		return toReturn;
+
 	}
-	return toReturn;
-    }
-	
+
     /**
      * Constructor for a new cell.
      * @param initialState - Initial state of a cell, dead or alive
